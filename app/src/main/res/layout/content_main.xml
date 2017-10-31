@@ -9,13 +9,78 @@
   tools:context="edu.cnm.deepdive.eb.flashme.MainActivity"
   tools:showIn="@layout/app_bar_main">
 
-  <TextView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="Hello World!"
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintLeft_toLeftOf="parent"
-    app:layout_constraintRight_toRightOf="parent"
-    app:layout_constraintTop_toTopOf="parent"/>
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="top"
+    android:orientation="vertical"
+    android:backgroundTint="@color/colorAccent">
+
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="@string/recent_deck"
+      android:textSize="20dp"
+      android:layout_gravity="center_horizontal"
+      android:gravity="center"
+      android:paddingTop="10dp"/>
+
+    <Button android:id="@+id/button_recent_deck"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="@string/recent_deck_button"
+      android:onClick="sendMessage"
+      android:layout_gravity="center_horizontal"
+      android:gravity="center"/>
+
+  </LinearLayout>
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="@string/deck_list"
+      android:textSize="20dp"
+      android:layout_gravity="center_horizontal"
+      android:gravity="center"
+      android:paddingTop="10dp"/>
+
+    <Button android:id="@+id/deck_1"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="@string/deck_1_button"
+      android:onClick="sendMessage"
+      android:layout_gravity="center_horizontal"
+      android:gravity="center"/>
+
+
+  </LinearLayout>
+
+  <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="horizontal"
+    android:gravity="bottom"
+    android:padding="5dp"
+    android:backgroundTint="@color/colorAccent">
+
+    <EditText android:id="@+id/add_deck_name"
+      android:layout_weight="1"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:hint="@string/enter_deck_name" />
+
+    <Button android:id="@+id/button_add_deck"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="@string/add_deck_button"
+      android:onClick="sendMessage" />
+
+  </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>

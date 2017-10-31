@@ -8,7 +8,7 @@ utilizing the power of our visual memories.
 The time saving aspect of _Flash me_ lies in its built in functionality 
 of automatically searching for images based on the user specified 
 keyword/s. The deck and card creation process follows a specific order, which
-add to the time saving capacity of _Flash me_
+add to the time saving capacity of _Flash me_. 
 
 ### 
 
