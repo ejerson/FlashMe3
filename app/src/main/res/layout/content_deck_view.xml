@@ -26,8 +26,6 @@
       android:onClick="sendMessage"
       android:padding="5dp"/>
 
-
-
   </LinearLayout>
 
 

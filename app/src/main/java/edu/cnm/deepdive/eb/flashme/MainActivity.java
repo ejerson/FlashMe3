@@ -73,25 +73,15 @@ public class MainActivity extends AppCompatActivity
     // Handle navigation view item clicks here.
     int id = item.getItemId();
 
-    if (id == R.id.nav_camera) {
+    if (id == R.id.nav_deck) {
       Intent intent = new Intent(MainActivity.this, MainActivity.class);
       startActivity(intent);
-    } else if (id == R.id.nav_gallery) {
-      Intent externalActivityIntent = new Intent(Intent.ACTION_PICK);
-      externalActivityIntent.setType("image/*");
-      externalActivityIntent.addFlags(
-          Intent.FLAG_ACTIVITY_CLEAR_WHEN_TASK_RESET);
-      startActivity(externalActivityIntent);
-    } else if (id == R.id.nav_slideshow) {
+    } else if (id == R.id.nav_deck_member) {
       Intent intent = new Intent(this, DeckActivity.class);
       startActivity(intent);
-
-    } else if (id == R.id.nav_manage) {
-
-    } else if (id == R.id.nav_share) {
-
-    } else if (id == R.id.nav_send) {
-
+    } else if (id == R.id.nav_card_create) {
+      Intent intent = new Intent(this, CardActivity.class);
+      startActivity(intent);
     }
 
     DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
