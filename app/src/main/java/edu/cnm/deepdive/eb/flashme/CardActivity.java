@@ -10,9 +10,4 @@ public class CardActivity extends AppCompatActivity {
     setContentView(R.layout.content_card_view);
 
   }
-
-
-
-
-
 }

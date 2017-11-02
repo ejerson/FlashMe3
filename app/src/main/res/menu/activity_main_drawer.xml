@@ -4,15 +4,12 @@
   <group android:checkableBehavior="single">
     <item
       android:id="@+id/nav_deck"
-      android:icon="@drawable/ic_menu_camera"
       android:title="Decks"/>
     <item
       android:id="@+id/nav_deck_member"
-      android:icon="@drawable/ic_menu_gallery"
       android:title="Cards"/>
     <item
       android:id="@+id/nav_card_create"
-      android:icon="@drawable/ic_menu_slideshow"
       android:title="Card Creation"/>
   </group>
 

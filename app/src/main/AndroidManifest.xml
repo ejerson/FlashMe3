@@ -11,7 +11,7 @@
     android:theme="@style/AppTheme">
     <activity
       android:label="@string/app_name"
-      android:name=".MainActivity"
+      android:name=".DeckActivity"
       android:theme="@style/AppTheme.NoActionBar">
       <intent-filter>
         <action android:name="android.intent.action.MAIN"/>
@@ -22,20 +22,13 @@
 
 
     <!--FIXME Do i need this?-->
-    <activity android:name=".DeckActivity"
-      android:parentActivityName=".MainActivity" >
-      <!-- The meta-data tag is required if you support API level 15 and lower -->
-      <meta-data
-        android:name="android.support.PARENT_ACTIVITY"
-        android:value=".MainActivity" />
-    </activity>
 
     <activity android:name=".CardActivity"
-      android:parentActivityName=".MainActivity" >
+      android:parentActivityName=".DeckActivity" >
       <!-- The meta-data tag is required if you support API level 15 and lower -->
       <meta-data
         android:name="android.support.PARENT_ACTIVITY"
-        android:value=".MainActivity" />
+        android:value=".DeckActivity" />
     </activity>
 
   </application>
