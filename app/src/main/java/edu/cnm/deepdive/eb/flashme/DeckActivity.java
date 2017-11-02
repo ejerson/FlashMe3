@@ -11,22 +11,23 @@ import android.view.View;
 import edu.cnm.deepdive.eb.flashme.fragments.DeckFragment;
 import edu.cnm.deepdive.eb.flashme.fragments.DeckMemberFragment;
 
-// TODO Be able to load Deck Member View when I click on the default deck
+// TODO
 
 public class DeckActivity extends AppCompatActivity {
-
+   FragmentManager manager = getSupportFragmentManager();
+   Fragment fragment = manager.findFragmentById(R.id.fragment_container);
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
-//    setupTools();
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+    Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
     setSupportActionBar(toolbar);
+      mainScreenDeckFragment();
+  }
 
-    FragmentManager manager = getSupportFragmentManager();
-    Fragment fragment = manager.findFragmentById(R.id.fragment_container);
+  private void mainScreenDeckFragment() {
     if (fragment == null) {
       fragment = new DeckFragment();
       Bundle args = new Bundle();
@@ -35,23 +36,21 @@ public class DeckActivity extends AppCompatActivity {
     }
   }
 
+  public void goToDeckFragment(View view) {
+    fragment = new DeckFragment();
+    Bundle args = new Bundle();
+    fragment.setArguments(args); // bundle
+    manager.beginTransaction().replace(R.id.fragment_container, fragment).commit();
+  }
 
-
-
-    public void goToActivity(View view) {
+  public void goToDeckMemberFragment(View view) {
 //      startActivity(new Intent(DeckActivity.this, CardActivity.class));
-      FragmentManager manager = getSupportFragmentManager();
-      Fragment fragment = manager.findFragmentById(R.id.content_deck_view);
-
         fragment = new DeckMemberFragment();
         Bundle args = new Bundle();
         fragment.setArguments(args); // bundle
         manager.beginTransaction().replace(R.id.fragment_container, fragment).commit();
 
     }
-
-
-
 
   @Override
   public void onBackPressed() {

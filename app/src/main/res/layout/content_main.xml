@@ -6,10 +6,7 @@
   android:layout_width="match_parent"
   android:layout_height="match_parent"
   app:layout_behavior="@string/appbar_scrolling_view_behavior"
-  tools:context="edu.cnm.deepdive.eb.flashme.DeckActivity"
-  tools:showIn="@layout/app_bar_main">
-
-
+  tools:context="edu.cnm.deepdive.eb.flashme.DeckActivity">
 
   <LinearLayout
     android:layout_width="match_parent"
@@ -56,16 +53,14 @@
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:text="@string/deck_tutorial_button"
-      android:onClick="goToActivity"
+      android:onClick="goToDeckMemberFragment"
       android:layout_gravity="center_horizontal"
       android:gravity="center"/>
-
-
   </LinearLayout>
 
   <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:orientation="horizontal"
     android:gravity="bottom"
     android:padding="5dp"
